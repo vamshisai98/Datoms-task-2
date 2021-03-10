@@ -1,0 +1,59 @@
+.container {
+  margin: 10px;
+  padding: 10px;
+  min-height: 100vh;
+  background: red;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.left,
+.right {
+
+  width: 50%;
+  background: white;
+
+}
+
+.input-box {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  top: 200px;
+  align-items: center;
+}
+
+input {
+  padding: 30px;
+  margin-bottom: 40px;
+}
+
+button {
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 40px;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 60px;
+}
+
+.table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+button:focus {
+  outline: none;
+}
+
+td {
+  border: 1px solid black;
+
+  padding: 50px;
+  font-size: 20px;
+}
