@@ -1,15 +1,29 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 
 function App() {
-  const [inp, setInp] = useState(null);
-  const handleClick = () => {};
+  const [inp, setInp] = useState('null');
+  let colorMe = () => {
+    let x = document.getElementById(inp);
+    x.style.background = 'red';
+  };
+  const handleClick = () => {
+    colorMe();
+  };
+
+  const handleChange = (e) => {
+    setInp(e.target.value);
+  };
+
+  // useEffect(() => {
+  //   colorMe();
+  // }, [inp]);
   return (
     <div className='App'>
       <div className='container'>
         <div className='left'>
           <div className='input-box'>
-            <input type='number' />
+            <input type='number' value={inp} onChange={handleChange} />
             <button onClick={handleClick}>Color Me</button>
           </div>
         </div>
@@ -18,19 +32,19 @@ function App() {
             <div className='table'>
               <table>
                 <tr>
-                  <td>1</td>
-                  <td>2</td>
-                  <td>3</td>
+                  <td id='1'>1</td>
+                  <td id='2'> 2</td>
+                  <td id='3'>3</td>
                 </tr>
                 <tr>
-                  <td>4</td>
-                  <td>5</td>
-                  <td>6</td>
+                  <td id='4'>4</td>
+                  <td id='5'>5</td>
+                  <td id='6'>6</td>
                 </tr>
                 <tr>
-                  <td>7</td>
-                  <td>8</td>
-                  <td>9</td>
+                  <td id='7'>7</td>
+                  <td id='8'>8</td>
+                  <td id='9'>9</td>
                 </tr>
               </table>
             </div>
